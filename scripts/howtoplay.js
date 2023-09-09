@@ -1,5 +1,5 @@
 document.getElementById('stop').addEventListener('click', function () {
-    window.location.href = '../htmls/landing.html'
+    window.location.href = '../htmls/index.html'
 })
 
 console.log('howtoplay connected')
