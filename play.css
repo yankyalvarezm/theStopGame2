@@ -1,0 +1,78 @@
+:root {
+    --titles: 'Sarala', 'sans-serif'
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--titles);
+}
+
+.title {
+    margin-top: 2;
+    /* margin-left: 4rem; */
+    font-size: 4rem;
+}
+
+#stop {
+    color: red;
+}
+
+#stop:hover {
+    background-color: red;
+    border-radius: 10%;
+    padding: 0.08rem 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.small-rectangle {
+    background-color: red;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    color: white;
+    font-family: var(--titles);
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.click-me {
+    padding: 1.5 6rem;
+    width: 20rem;
+    color: black;
+    background-color: white;
+}
+
+.click-me:last-of-type:hover {
+    background-color: #D5D5D5;
+    transition: 0.5s;
+}
+
+.generators {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.side-container {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    gap: 2rem;
+}
+
+.restart {
+    cursor: pointer;
+}
