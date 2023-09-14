@@ -81,7 +81,7 @@ nameInput.addEventListener('input', function () {
 playButton.addEventListener('click', function () {
     if (checkConditions()) {
         console.log("All conditions met. Starting game.");
-        window.location.href = './play.html';
+        window.location.href = '../htmls/play.html';
     } else {
         console.log("Conditions not met.");
     }
@@ -90,7 +90,7 @@ playButton.addEventListener('click', function () {
 playButton.addEventListener('click', function () {
     const nameValue = nameInput.value;
     localStorage.setItem('userName', nameValue);
-    window.location.href = './play.html';
+    window.location.href = '../htmls/play.html';
 });
 
 document.addEventListener('DOMContentLoaded', function () {
