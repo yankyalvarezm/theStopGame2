@@ -786,9 +786,9 @@ function countdown() {
         const difficulty = localStorage.getItem('difficulty')
 
         if ((difficulty === 'Easy' && totalScore > 50) || (difficulty === 'Medium' && totalScore > 70) || (difficulty === 'Hards' && totalScore === 90)) {
-            window.location.href = "../htmls/winner.html";
+            window.location.href = "./htmls/winner.html";
         } else {
-            window.location.href = "../htmls/looser.html";
+            window.location.href = "./htmls/looser.html";
         }
     }
 

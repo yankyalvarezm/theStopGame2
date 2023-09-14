@@ -1,5 +1,5 @@
 document.getElementById('stop').addEventListener('click', function () {
-    window.location.href = '../index.html';
+    window.location.href = './index.html';
 });
 
 const nameInput = document.getElementById('name');
