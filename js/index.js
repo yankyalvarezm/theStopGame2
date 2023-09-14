@@ -1,9 +1,9 @@
 document.getElementById("title-btn2").addEventListener("click", function () {
-    window.location.href = "../htmls/howtoplay.html";
+    window.location.href = "./htmls/howtoplay.html";
 });
 
 document.getElementById('title-btn1').addEventListener('click', function () {
-    window.location.href = '../htmls/setup.html';
+    window.location.href = './htmls/setup.html';
 })
 
 
