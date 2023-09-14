@@ -69,9 +69,11 @@ h1 {
     border-radius: 1rem;
     padding: 1.5rem 2rem;
     font-family: var(--titles);
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    white-space: wrap;
     margin-bottom: 3rem;
 }

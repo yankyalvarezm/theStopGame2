@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&family=Sarala&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/setup.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stop Game</title>
+</head>
+
+<body>
+    <h1 class="title">The <span id="stop" value="stop-icon">STOP</span> game</h1>
+    <main>
+        <input type="text" placeholder="Enter your name" id="name" value="">
+        <div id="name-warning" class="warning"></div>
+
+        <div class="select-difficulty"></div>
+        <div class="btns-difficulty"></div>
+        <div id="difficulty-warning" class="warning"></div>
+
+        <button id="play" disabled>Play</button>
+    </main>
+
+    <script src="/js/data.js"></script>
+    <!-- <script src="/js/play.js"></script> -->
+    <script src="/js/setup.js"></script>
+
+</body>
+
+</html>

@@ -1,6 +1,10 @@
 document.getElementById("title-btn2").addEventListener("click", function () {
-    window.location.href = "./howtoplay.html";
+    window.location.href = "../htmls/howtoplay.html";
 });
+
+document.getElementById('title-btn1').addEventListener('click', function () {
+    window.location.href = '../htmls/setup.html';
+})
 
 
 // ** Stop Sequence
@@ -16,8 +20,3 @@ const intervalId = setInterval(() => {
         clearInterval(intervalId);
     }
 }, 1000);
-
-
-document.getElementById('title-btn1').addEventListener('click', function () {
-    window.location.href = './play.html';
-})
