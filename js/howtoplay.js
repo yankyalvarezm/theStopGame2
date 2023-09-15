@@ -30,13 +30,13 @@ const lossing = elClassCont('SECTION', 'bottom-container', '', main)
 elClassCont('DIV', 'small-rectangle', 'Summary', summary);
 elClassCont('DIV', 'small-circle', '1', summary);
 elClassCont('DIV', 'large-rectangle',
-    ' <p><span style="color: red;">"Stop"</span> is a multiplayer word game where players have to quickly come up with words that start with a randomly generated letter. This letter is used to fill out different categories like professions, sports, colors, and countries, all within a one-minute timer.</p>'
+    ' <p><span style="color: red;">"Stop"</span> is a word game where players have to quickly come up with words that start with a randomly generated letter. This letter is used to fill out different categories as professions, sports, and countries, all within a 20 seconds timer.</p>'
     , summary);
 
 elClassCont('DIV', 'small-rectangle', 'How to win?', winningHead);
 elClassCont('DIV', 'small-circle', '2', winningHead);
 elClassCont('DIV', 'large-rectangle',
-    '<p>You score points by <span style="color: red;">being the first to list unique words in each category</span> that start with the given letter. The objective is to have the most points by the end of the game.</p>'
+    '<p>You score points by <span style="color: red;">listing unique words in each category</span> that start with the given letter. The objective is to have the most points by the end of the game.</p>'
     , winning);
 
 elClassCont('DIV', 'small-rectangle', 'How to lose?', lossing);
