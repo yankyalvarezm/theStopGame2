@@ -328,6 +328,7 @@ function countdown() {
     }
 
     if (timeLeft === 19 && loop === 1) {
+        console.log('-------- Round #1 -----------')
 
         // ** Gameplay Structure Section
 
@@ -413,6 +414,7 @@ function countdown() {
 
                 debounceTimeout = setTimeout(() => {
                     const inputCountry = this.value;
+                    console.log('--- Country --')
                     // console.log('Input Country:', inputCountry);
 
                     const startingLetter = `${randomLetter}`;
@@ -427,13 +429,15 @@ function countdown() {
                         gameScore += 10;
                         totalScore += 10
                         // console.log('Country "true" Score:', countryScore);
-                        console.log('game score: +', gameScore);
-                        console.log('total score: +', totalScore);
+                        console.log('game score: + 10');
+                        console.log('total score:', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
                         hasAddedCountryScore = true;
+                        console.log('added:', hasAddedCountryScore)
                         hasDeletedCountryScore = false;
+                        console.log('deleted:', hasDeletedCountryScore);
 
                     } else if (!verificationResult && gameScore > 0 && !hasDeletedCountryScore && hasAddedCountryScore) {
 
@@ -441,13 +445,15 @@ function countdown() {
                         gameScore -= 10;
                         totalScore -= 10;
                         // console.log('Country "false" Score:', countryScore);
-                        console.log('game score: -', gameScore);
-                        console.log('total score: -', totalScore);
+                        console.log('game score: - 10');
+                        console.log('total score:', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
                         hasDeletedCountryScore = true;
+                        console.log('deleted:', hasDeletedCountryScore);
                         hasAddedCountryScore = false;
+                        console.log('added:', hasAddedCountryScore);
                     }
                 }, 500);
             });
@@ -478,6 +484,7 @@ function countdown() {
 
                 debounceTimeout = setTimeout(() => {
                     const inputSport = this.value;
+                    console.log('--- Sport --')
                     // console.log('Input Sport:', inputSport);
 
                     const startingLetter = `${randomLetter}`;
@@ -492,13 +499,15 @@ function countdown() {
                         gameScore += 10;
                         totalScore += 10;
                         // console.log('Sport "true" Score:', sportScore);
-                        console.log('game score: +', gameScore);
-                        console.log('total score: +', totalScore);
+                        console.log('game score: + 10');
+                        console.log('total score:', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
                         hasAddedSportScore = true;
+                        console.log('added: ', hasAddedSportScore)
                         hasDeletedSportScore = false;
+                        console.log('deleted:', hasDeletedSportScore)
 
                     } else if (!verificationResult && gameScore > 0 && !hasDeletedSportScore && hasAddedSportScore) {
 
@@ -507,13 +516,15 @@ function countdown() {
                         totalScore -= 10;
 
                         // console.log('Sport "false" Score:', sportScore);
-                        console.log('game score: -', gameScore);
-                        console.log('total score: -', totalScore);
+                        console.log('game score: - 10');
+                        console.log('total score:', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
                         hasDeletedSportScore = true;
+                        console.log('deleted:', hasDeletedSportScore)
                         hasAddedSportScore = false;
+                        console.log('added:', hasAddedSportScore)
                     }
                 }, 500);
             });
@@ -534,9 +545,7 @@ function countdown() {
         // * Profession Validation
 
         let professionScore = 0;
-        let hasAddedProfessionScore = false;
-        let hasDeletedProfessionScore = false;
-
+        
         Array.from(inputProfessionSelector).forEach(input => {
             let debounceTimeout = null;
 
@@ -547,13 +556,14 @@ function countdown() {
 
 
                     const inputProfession = this.value;
-                    console.log('Input Profession:', inputProfession);
+                    console.log('--- Profession --')
+                    // console.log('Input Profession:', inputProfession);
 
                     const startingLetter = `${randomLetter}`;
-                    console.log('Starting letter:', startingLetter);
+                    // console.log('Starting letter:', startingLetter);
 
                     const verificationResult = verifyProfession(inputProfession, startingLetter);
-                    console.log('Verification Result (Profession):', verificationResult);
+                    // console.log('Verification Result', verificationResult);
 
                     if (verificationResult && !hasAddedProfessionScore) {
 
@@ -561,15 +571,15 @@ function countdown() {
                         gameScore += 10;
                         totalScore += 10;
                         // console.log('Profession "true" Score:', professionScore);
-                        console.log('game score: +', gameScore);
-                        console.log('total score: +', totalScore);
+                        console.log('game score: + 10');
+                        console.log('total score:', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
                         hasAddedProfessionScore = true;
-                        console.log(hasAddedProfessionScore);
+                        console.log('added:', hasAddedProfessionScore);
 
                         hasDeletedProfessionScore = false;
-                        console.log(hasDeletedProfessionScore);
+                        console.log('deleted', hasDeletedProfessionScore);
 
                     } else if (!verificationResult && gameScore > 0 && !hasDeletedProfessionScore && hasAddedProfessionScore) {
 
@@ -577,8 +587,8 @@ function countdown() {
                         gameScore -= 10;
                         totalScore -= 10;
                         // console.log('Profession "false" Score:', professionScore);
-                        console.log('game score: -', gameScore);
-                        console.log('total score: -', totalScore);
+                        console.log('game score: - 10');
+                        console.log('total score:', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
                         hasDeletedProfessionScore = true;
@@ -599,18 +609,25 @@ function countdown() {
 
 
     if (timeLeft === 0 && loop === 2) {
+        console.log('-------- Round #2 -----------')
 
         gameScore = 0;
 
         hasAddedCountryScore = false;
+        console.log('added country score:', hasAddedCountryScore)
         hasDeletedCountryScore = false;
+        console.log('deleted country score:', hasDeletedCountryScore)
 
         hasAddedSportScore = false;
+        console.log('added sport score:', hasAddedSportScore);
         hasDeletedSportScore = false;
+        console.log('deleted sport score:', hasDeletedSportScore);
 
 
         hasAddedProfessionScore = false;
+        console.log('added profession score:', hasAddedProfessionScore);
         hasDeletedProfessionScore = false;
+        console.log('deleted profession score', hasDeletedProfessionScore);
 
 
         const country = document.getElementById('input-country');
@@ -619,6 +636,11 @@ function countdown() {
         country.style.border = '2px solid grey';
         country.style.backgroundColor = 'white';
 
+        if (verifyCountry(country.value, randomLetter)) {
+            hasAddedCountryScore = true;
+            console.log('added country score:', hasAddedCountryScore)
+        }
+
 
         const sport = document.getElementById('input-sport');
         sport.value = ''
@@ -626,9 +648,22 @@ function countdown() {
         sport.style.border = '2px solid grey';
         sport.style.backgroundColor = 'white';
 
+        if (verifySport(sport.value, randomLetter)) {
+            hasAddedSportScore = true;
+            console.log('added sport score:', hasAddedSportScore);
+        }
+
 
         const profession = document.getElementById('input-profession');
         profession.value = ''
+
+        profession.style.border = '2px solid grey';
+        profession.style.backgroundColor = 'white';
+
+        if (verifyProfession(profession.value, randomLetter)) {
+            hasAddedProfessionScore = true;
+            console.log('added profession score:', hasAddedProfessionScore);
+        }
 
         const intervalId = setInterval(() => {
             clearInterval(intervalId);
@@ -643,14 +678,14 @@ function countdown() {
 
 
 
-        profession.style.border = '2px solid grey';
-        profession.style.backgroundColor = 'white';
+        
 
         console.log('total score:', totalScore);
         console.log('game score:', gameScore);
     }
 
     if (timeLeft === 0 && loop === 3) {
+        console.log('-------- Round #3 -----------')
 
         gameScore = 0;
 
@@ -736,61 +771,64 @@ function countdown() {
         // hideElements()
     }
 
-    if (timeLeft === 0 && loop === 3) {
+        if (timeLeft === 0 && loop === 3) {
 
-        hasAddedCountryScore = false;
-        hasDeletedCountryScore = false;
+            hasAddedCountryScore = false;
+            hasDeletedCountryScore = false;
 
-        hasAddedSportScore = false;
-        hasDeletedSportScore = false;
-
-
-        hasAddedProfessionScore = false;
-        hasDeletedProfessionScore = false;
-
-        gameScore = 0;
-
-        const country = document.getElementById('input-country');
-        country.value = '';
-
-        country.style.border = '2px solid grey';
-        country.style.backgroundColor = 'white';
+            hasAddedSportScore = false;
+            hasDeletedSportScore = false;
 
 
-        const sport = document.getElementById('input-sport');
-        sport.value = '';
+            hasAddedProfessionScore = false;
+            hasDeletedProfessionScore = false;
 
-        sport.style.border = '2px solid grey';
-        sport.style.backgroundColor = 'white';
+            gameScore = 0;
+
+            const country = document.getElementById('input-country');
+            country.value = '';
+
+            country.style.border = '2px solid grey';
+            country.style.backgroundColor = 'white';
 
 
-        const profession = document.getElementById('input-profession');
-        profession.value = '';
+            const sport = document.getElementById('input-sport');
+            sport.value = '';
 
-        profession.style.border = '2px solid grey';
-        profession.style.backgroundColor = 'white';
+            sport.style.border = '2px solid grey';
+            sport.style.backgroundColor = 'white';
 
-        let intervalId = setInterval(() => {
-            clearInterval(intervalId)
-            const lettersArray = 'ABCDEFGHIJKLMNOPQRSTUVYZ'.split('');
 
-            const randomIndex = Math.floor(Math.random() * lettersArray.length);
+            const profession = document.getElementById('input-profession');
+            profession.value = '';
 
-            randomLetter = lettersArray[randomIndex];
-            document.querySelector('.letter-holder').innerText = lettersArray[randomIndex];
-        }, 50);
+            profession.style.border = '2px solid grey';
+            profession.style.backgroundColor = 'white';
 
-        console.log('total score:', totalScore);
-        console.log('game score:', gameScore);
-    }
+            let intervalId = setInterval(() => {
+                clearInterval(intervalId)
+                const lettersArray = 'ABCDEFGHIJKLMNOPQRSTUVYZ'.split('');
+
+                const randomIndex = Math.floor(Math.random() * lettersArray.length);
+
+                randomLetter = lettersArray[randomIndex];
+                document.querySelector('.letter-holder').innerText = lettersArray[randomIndex];
+            }, 50);
+
+            console.log('total score:', totalScore);
+            console.log('game score:', gameScore);
+        }
 
     if (timeLeft === 1 && loop === 3) {
         const difficulty = localStorage.getItem('difficulty')
 
-        if ((difficulty === 'Easy' && totalScore > 50) || (difficulty === 'Medium' && totalScore > 70) || (difficulty === 'Hards' && totalScore === 90)) {
+        if ((difficulty === 'Easy' && totalScore > 50) || (difficulty === 'Medium' && totalScore > 70) || (difficulty === 'Hards' && totalScore >= 90)) {
             window.location.href = "../htmls/winner.html";
+            console.log('winners page')
+           
         } else {
             window.location.href = "../htmls/looser.html";
+            console.log('lossers page')
         }
     }
 
@@ -811,5 +849,7 @@ function resetTimer(seconds) {
 }
 
 const difficulty = localStorage.getItem('difficulty')
+
 document.getElementById('win-text').innerHTML = `Congratulations, you complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
+
 document.getElementById('losser-text').innerHTML = `So close..., almost complete the <span>${localStorage.getItem('difficulty')}</pan>level ! ! !`

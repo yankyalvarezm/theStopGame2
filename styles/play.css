@@ -126,11 +126,11 @@ h1 {
     font-size: 2rem;
 }
 
-.round-title:hover {
+/* .round-title:hover {
     background-color: rgb(144, 197, 144);
     color: white;
     transition: 0.5s;
-}
+} */
 
 .gameplay-container {
     display: flex;

@@ -85,95 +85,95 @@ const professions = {
     z: ['Zoologist', 'Zookeeper', 'Zumba Instructor', 'Zen Master', 'Zitherist']
 };
 
-function verifyCountry(inputCountry, startingLetter) {
-    const lowerInputCountry = inputCountry.toLowerCase();
-    const lowerStartingLetter = startingLetter.toLowerCase();
+        function verifyCountry(inputCountry, startingLetter) {
+            const lowerInputCountry = inputCountry.toLowerCase();
+            const lowerStartingLetter = startingLetter.toLowerCase();
 
-    const lowerCaseCountries = countries[lowerStartingLetter].map(country => country.toLowerCase());
+            const lowerCaseCountries = countries[lowerStartingLetter].map(country => country.toLowerCase());
 
-    if (lowerCaseCountries.includes(lowerInputCountry)) {
-        // console.log('Valid Country');
-        document.getElementById('descriptionID').innerHTML = `Try to fill as many categories as you can, good luck!`;
-        document.getElementById('input-country').style.border = '2px solid green';
-        document.getElementById('input-country').style.backgroundColor = 'rgb(202, 230, 202)';
-        return true
-    } else if (lowerInputCountry.charAt(0) !== lowerStartingLetter) {
-        // console.log(`Start with the letter: ${lowerStartingLetter.toUpperCase()}`);
-        document.getElementById('descriptionID').innerHTML = `Remember to start with the letter: ${lowerStartingLetter.toUpperCase()}`;
-        document.getElementById('input-country').style.border = '3px solid grey';
-        document.getElementById('input-country').style.backgroundColor = 'white';
+            if (lowerCaseCountries.includes(lowerInputCountry)) {
+                // console.log('Valid Country');
+                document.getElementById('descriptionID').innerHTML = `Try to fill as many categories as you can, good luck!`;
+                document.getElementById('input-country').style.border = '2px solid green';
+                document.getElementById('input-country').style.backgroundColor = 'rgb(202, 230, 202)';
+                return true
+            } else if (lowerInputCountry.charAt(0) !== lowerStartingLetter) {
+                // console.log(`Start with the letter: ${lowerStartingLetter.toUpperCase()}`);
+                document.getElementById('descriptionID').innerHTML = `Remember to start with the letter: ${lowerStartingLetter.toUpperCase()}`;
+                document.getElementById('input-country').style.border = '3px solid grey';
+                document.getElementById('input-country').style.backgroundColor = 'white';
 
-        setTimeout(() => {
-            document.getElementById('descriptionID').innerHTML = `Try to fill as many categories as you can, good luck!`;
-        }, 3000);
-        return false
-    } else {
-        // console.log('Invalid Country');
-        document.getElementById('descriptionID').innerHTML = `Try to fill as many categories as you can, good luck!`;
-        document.getElementById('input-country').style.border = '2px solid grey';
-        document.getElementById('input-country').style.backgroundColor = 'white';
-        return false
-    }
-}
+                setTimeout(() => {
+                    document.getElementById('descriptionID').innerHTML = `Try to fill as many categories as you can, good luck!`;
+                }, 3000);
+                return false
+            } else {
+                // console.log('Invalid Country');
+                document.getElementById('descriptionID').innerHTML = `Try to fill as many categories as you can, good luck!`;
+                document.getElementById('input-country').style.border = '2px solid grey';
+                document.getElementById('input-country').style.backgroundColor = 'white';
+                return false
+            }
+        }
 
-function verifySport(inputSport, startingLetter) {
+        function verifySport(inputSport, startingLetter) {
 
-    const lowerInputSport = inputSport.toLowerCase();
-    const lowerStartingLetter = startingLetter.toLowerCase();
+            const lowerInputSport = inputSport.toLowerCase();
+            const lowerStartingLetter = startingLetter.toLowerCase();
 
-    const sportsWithStartingLetter = sports[lowerStartingLetter];
+            const sportsWithStartingLetter = sports[lowerStartingLetter];
 
-    if (sportsWithStartingLetter && sportsWithStartingLetter.map(sport => sport.toLowerCase()).includes(lowerInputSport)) {
-        // console.log('Valid Sport');
-        document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
-        document.getElementById('input-sport').style.border = '2px solid green';
-        document.getElementById('input-sport').style.backgroundColor = 'rgb(202, 230, 202)';
-        return true
-    } else if (lowerInputSport.charAt(0) !== lowerStartingLetter) {
-        // console.log(`Start with the letter: ${lowerStartingLetter.toUpperCase()}`);
-        document.getElementById('descriptionID').innerHTML = `Remember to start with the letter: ${lowerStartingLetter.toUpperCase()}`;
-        document.getElementById('input-sport').style.border = '3px solid grey';
-        document.getElementById('input-sport').style.backgroundColor = 'white';
-        setTimeout(() => {
-            document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
-        }, 3000);
-        return false
-    } else {
-        // console.log('Invalid Sport');
-        document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
-        document.getElementById('input-sport').style.border = '2px solid grey';
-        document.getElementById('input-sport').style.backgroundColor = 'white';
-        return false
-    }
-}
+            if (sportsWithStartingLetter && sportsWithStartingLetter.map(sport => sport.toLowerCase()).includes(lowerInputSport)) {
+                // console.log('Valid Sport');
+                document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
+                document.getElementById('input-sport').style.border = '2px solid green';
+                document.getElementById('input-sport').style.backgroundColor = 'rgb(202, 230, 202)';
+                return true
+            } else if (lowerInputSport.charAt(0) !== lowerStartingLetter) {
+                // console.log(`Start with the letter: ${lowerStartingLetter.toUpperCase()}`);
+                document.getElementById('descriptionID').innerHTML = `Remember to start with the letter: ${lowerStartingLetter.toUpperCase()}`;
+                document.getElementById('input-sport').style.border = '3px solid grey';
+                document.getElementById('input-sport').style.backgroundColor = 'white';
+                setTimeout(() => {
+                    document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
+                }, 3000);
+                return false
+            } else {
+                // console.log('Invalid Sport');
+                document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
+                document.getElementById('input-sport').style.border = '2px solid grey';
+                document.getElementById('input-sport').style.backgroundColor = 'white';
+                return false
+            }
+        }
 
-function verifyProfession(inputProfession, startingLetter) {
+        function verifyProfession(inputProfession, startingLetter) {
 
-    const lowerInputProfession = inputProfession.toLowerCase();
-    const lowerStartingLetter = startingLetter.toLowerCase();
+            const lowerInputProfession = inputProfession.toLowerCase();
+            const lowerStartingLetter = startingLetter.toLowerCase();
 
-    const professionsWithStartingLetter = professions[lowerStartingLetter];
+            const professionsWithStartingLetter = professions[lowerStartingLetter];
 
-    if (professionsWithStartingLetter && professionsWithStartingLetter.map(profession => profession.toLowerCase()).includes(lowerInputProfession)) {
-        // console.log('Valid Profession');
-        document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
-        document.getElementById('input-profession').style.border = '2px solid green';
-        document.getElementById('input-profession').style.backgroundColor = 'rgb(202, 230, 202)';
-        return true
-    } else if (lowerInputProfession.charAt(0) !== lowerStartingLetter) {
-        // console.log(`Start with the letter: ${lowerStartingLetter.toUpperCase()}`);
-        document.getElementById('descriptionID').innerHTML = `Remember to start with the letter: ${lowerStartingLetter.toUpperCase()}`;
-        document.getElementById('input-profession').style.border = '3px solid grey';
-        document.getElementById('input-profession').style.backgroundColor = 'white';
-        setTimeout(() => {
-            document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
-        }, 3000);
-        return false
-    } else {
-        // console.log('Invalid Profession');
-        document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
-        document.getElementById('input-profession').style.border = '2px solid grey';
-        document.getElementById('input-profession').style.backgroundColor = 'white';
-        return false
-    }
-}
+            if (professionsWithStartingLetter && professionsWithStartingLetter.map(profession => profession.toLowerCase()).includes(lowerInputProfession)) {
+                // console.log('Valid Profession');
+                document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
+                document.getElementById('input-profession').style.border = '2px solid green';
+                document.getElementById('input-profession').style.backgroundColor = 'rgb(202, 230, 202)';
+                return true
+            } else if (lowerInputProfession.charAt(0) !== lowerStartingLetter) {
+                // console.log(`Start with the letter: ${lowerStartingLetter.toUpperCase()}`);
+                document.getElementById('descriptionID').innerHTML = `Remember to start with the letter: ${lowerStartingLetter.toUpperCase()}`;
+                document.getElementById('input-profession').style.border = '3px solid grey';
+                document.getElementById('input-profession').style.backgroundColor = 'white';
+                setTimeout(() => {
+                    document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
+                }, 3000);
+                return false
+            } else {
+                // console.log('Invalid Profession');
+                document.getElementById('descriptionID').innerHTML = 'Try to fill as much categories as you can, good luck!';
+                document.getElementById('input-profession').style.border = '2px solid grey';
+                document.getElementById('input-profession').style.backgroundColor = 'white';
+                return false
+            }
+        }
