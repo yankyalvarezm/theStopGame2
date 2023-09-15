@@ -1,0 +1,79 @@
+:root {
+    --titles: 'Sarala', 'sans-serif'
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--titles);
+}
+
+.title {
+    margin-top: 2;
+    /* margin-left: 4rem; */
+    font-size: 4rem;
+}
+
+#stop {
+    color: red;
+}
+
+#stop:hover {
+    background-color: red;
+    border-radius: 10%;
+    padding: 0.08rem 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.letter-holder {
+    display: none;
+}
+
+.hr-main {
+    display: none;
+}
+
+.side-container {
+    display: none;
+}
+
+@keyframes blinkBackgroundColor {
+
+    0%,
+    100% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+}
+
+@keyframes blinkTextColor {
+
+    0%,
+    100% {
+        color: white;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+#win-text>span {
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: green;
+    color: white;
+    animation: blinkBackgroundColor 0.8s infinite 5s, blinkTextColor 0.8s infinite 5s;
+}

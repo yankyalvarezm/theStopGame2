@@ -142,6 +142,7 @@ function startSequence(sideContainer) {
     }, 50);
 }
 
+
 // ? --------------------------------------------------------
 // ? (Event Listener) - Fires the Start Sequence
 document.getElementsByClassName('click-me')[0].addEventListener('click', function () {
@@ -178,6 +179,24 @@ function countdown() {
 
         const clickme = document.querySelector('.click-me');
         clickme.innerHTML = 'Start';
+
+        Array.from(document.getElementsByClassName('click-me')).forEach(el => {
+            el.style.backgroundColor = 'white';
+            el.style.color = 'black';
+            el.innerText = "Start";
+
+            el.addEventListener('mouseenter', function () {
+                this.style.backgroundColor = '#D5D5D5';
+                this.style.color = 'black';
+                this.innerText = "Start";
+            });
+
+            el.addEventListener('mouseleave', function () {
+                this.style.backgroundColor = 'white';
+                this.style.color = 'black';
+                this.innerText = "Start";
+            });
+        });
 
         console.log('loop:', loop);
         console.log('Round:', round);
@@ -671,6 +690,22 @@ function countdown() {
 
         console.log('total score:', totalScore);
         console.log('game score:', gameScore);
+
+        const gameplayContainer = document.querySelector('.gameplay-container');
+        const inputsContainer = document.querySelector('.inputs-container');
+        const descriptionID = document.getElementById('descriptionID');
+        const roundtitle = document.querySelector('.round-title')
+        const clickme = document.querySelector('.click-me')
+
+        if (gameplayContainer && inputsContainer && descriptionID && roundTitle) {
+            gameplayContainer.classList.toggle('hidden')
+            inputsContainer.classList.toggle('hidden')
+            descriptionID.classList.toggle('hidden');
+            roundtitle.classList.toggle('hidden');
+            clickme.classList.toggle('hidden');
+
+            console.log('toggle #2')
+        }
     }
 
     if (timeLeft === 25 && loop === 2) {
@@ -692,47 +727,6 @@ function countdown() {
         }
         // hideElements()
     }
-
-    if (timeLeft === 0 && loop === 3) {
-
-        const gameplayContainer = document.querySelector('.gameplay-container');
-        const inputsContainer = document.querySelector('.inputs-container');
-        const descriptionID = document.getElementById('descriptionID');
-        const roundtitle = document.querySelector('.round-title')
-        const clickme = document.querySelector('.click-me')
-
-        if (gameplayContainer && inputsContainer && descriptionID && roundTitle) {
-            gameplayContainer.classList.toggle('hidden')
-            inputsContainer.classList.toggle('hidden')
-            descriptionID.classList.toggle('hidden');
-            roundtitle.classList.toggle('hidden');
-            clickme.classList.toggle('hidden');
-
-            console.log('toggle #2')
-        }
-        // hideElements()
-    }
-
-    // if (timeLeft === 25 && loop === 3) {
-
-    //     const gameplayContainer = document.querySelector('.gameplay-container');
-    //     const inputsContainer = document.querySelector('.inputs-container');
-    //     const descriptionID = document.getElementById('descriptionID');
-    //     const roundtitle = document.querySelector('.round-title')
-    //     const clickme = document.querySelector('.click-me')
-
-    //     if (gameplayContainer && inputsContainer && descriptionID && roundTitle) {
-    //         gameplayContainer.classList.toggle('hidden')
-    //         inputsContainer.classList.toggle('hidden')
-    //         descriptionID.classList.toggle('hidden');
-    //         roundtitle.classList.toggle('hidden');
-    //         clickme.classList.toggle('hidden');
-
-    //         console.log('toggle #3')
-    //     }
-    //     // hideElements()
-    // }
-
 
     if (timeLeft === 0 && loop === 3) {
 
@@ -807,3 +801,7 @@ function removeRestart() {
 function resetTimer(seconds) {
     timeLeft = seconds;
 }
+
+const difficulty = localStorage.getItem('difficulty')
+document.getElementById('win-text').innerHTML = `Congratulations, you complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
+document.getElementById('loss-text').innerHTML = `So close..., almost complete the ${localStorage.getItem('difficulty')}level ! ! !`
