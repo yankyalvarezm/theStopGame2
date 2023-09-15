@@ -70,7 +70,7 @@ h1 {
     }
 }
 
-#win-text>span {
+.win-text>span {
     padding: 0.6rem 1.5rem;
     border-radius: 0.5rem;
     background-color: green;

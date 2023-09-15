@@ -849,6 +849,14 @@ function resetTimer(seconds) {
 
 const difficulty = localStorage.getItem('difficulty')
 
-document.getElementById('win-text').innerHTML = `Congratulations, you complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
+let winnerSelector = document.querySelector('.win-text')
 
-document.getElementById('win-text').innerHTML = `So close..., almost complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
+if (winnerSelector) {
+    winnerSelector.innerHTML = `Congratulations, you complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
+}
+
+let loserSelector = document.querySelector('.loss-text')
+
+if (loserSelector) {
+    loserSelector.innerHTML = `So close..., almost complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
+}
