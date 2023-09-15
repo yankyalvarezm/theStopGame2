@@ -427,21 +427,22 @@ function countdown() {
                         gameScore += 10;
                         totalScore += 10
                         // console.log('Country "true" Score:', countryScore);
-                        console.log('game score:', gameScore);
-                        console.log('total score:', totalScore);
+                        console.log('game score: +', gameScore);
+                        console.log('total score: +', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
                         hasAddedCountryScore = true;
                         hasDeletedCountryScore = false;
 
-                    } else if (!verificationResult && gameScore > 0 && !hasDeletedCountryScore) {
+                    } else if (!verificationResult && gameScore > 0 && !hasDeletedCountryScore && hasAddedCountryScore) {
 
                         countryScore -= 10;
                         gameScore -= 10;
                         totalScore -= 10;
                         // console.log('Country "false" Score:', countryScore);
-                        console.log('game score:', gameScore);
+                        console.log('game score: -', gameScore);
+                        console.log('total score: -', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
@@ -491,28 +492,27 @@ function countdown() {
                         gameScore += 10;
                         totalScore += 10;
                         // console.log('Sport "true" Score:', sportScore);
-                        console.log('game score:', gameScore);
-                        console.log('total score:', totalScore);
+                        console.log('game score: +', gameScore);
+                        console.log('total score: +', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
                         hasAddedSportScore = true;
                         hasDeletedSportScore = false;
 
-                    } else if (!verificationResult && gameScore > 0 && !hasDeletedSportScore) {
+                    } else if (!verificationResult && gameScore > 0 && !hasDeletedSportScore && hasAddedSportScore) {
 
                         sportScore -= 10;
                         gameScore -= 10;
                         totalScore -= 10;
 
-                        console.log('Sport "false" Score:', sportScore);
-                        console.log('game score:', gameScore);
-                        console.log('total score:', totalScore);
+                        // console.log('Sport "false" Score:', sportScore);
+                        console.log('game score: -', gameScore);
+                        console.log('total score: -', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
 
                         hasDeletedSportScore = true;
-
                         hasAddedSportScore = false;
                     }
                 }, 500);
@@ -544,6 +544,8 @@ function countdown() {
                 clearTimeout(debounceTimeout);
 
                 debounceTimeout = setTimeout(() => {
+
+
                     const inputProfession = this.value;
                     console.log('Input Profession:', inputProfession);
 
@@ -559,26 +561,32 @@ function countdown() {
                         gameScore += 10;
                         totalScore += 10;
                         // console.log('Profession "true" Score:', professionScore);
-                        console.log('game score:', gameScore);
-                        console.log('total score:', totalScore);
+                        console.log('game score: +', gameScore);
+                        console.log('total score: +', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
                         hasAddedProfessionScore = true;
-                        hasDeletedProfessionScore = false;
+                        console.log(hasAddedProfessionScore);
 
-                    } else if (!verificationResult && gameScore > 0 && !hasDeletedProfessionScore) {
+                        hasDeletedProfessionScore = false;
+                        console.log(hasDeletedProfessionScore);
+
+                    } else if (!verificationResult && gameScore > 0 && !hasDeletedProfessionScore && hasAddedProfessionScore) {
 
                         professionScore -= 10;
                         gameScore -= 10;
                         totalScore -= 10;
                         // console.log('Profession "false" Score:', professionScore);
-                        console.log('game score:', gameScore);
-                        console.log('total score:', totalScore);
+                        console.log('game score: -', gameScore);
+                        console.log('total score: -', totalScore);
                         inputScore.innerHTML = `${totalScore}`;
 
-
                         hasDeletedProfessionScore = true;
+                        console.log('deleted: ', hasDeletedProfessionScore);
+
+
                         hasAddedProfessionScore = false;
+                        console.log('added: ', hasAddedProfessionScore);
                     }
                 }, 500);
             });
@@ -683,7 +691,7 @@ function countdown() {
 
             randomLetter = lettersArray[randomIndex];
             document.querySelector('.letter-holder').innerText = lettersArray[randomIndex];
-        }, 100);
+        }, 200);
 
         profession.style.border = '2px solid grey';
         profession.style.backgroundColor = 'white';
@@ -804,4 +812,4 @@ function resetTimer(seconds) {
 
 const difficulty = localStorage.getItem('difficulty')
 document.getElementById('win-text').innerHTML = `Congratulations, you complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
-document.getElementById('loss-text').innerHTML = `So close..., almost complete the ${localStorage.getItem('difficulty')}level ! ! !`
+document.getElementById('losser-text').innerHTML = `So close..., almost complete the <span>${localStorage.getItem('difficulty')}</pan>level ! ! !`

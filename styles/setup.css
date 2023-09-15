@@ -36,10 +36,12 @@ h1 {
 }
 
 main {
-    margin-top: 40%;
+    margin-top: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    /* align-content: center; */
     gap: 1rem;
 }
 

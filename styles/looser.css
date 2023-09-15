@@ -46,11 +46,15 @@ h1 {
     display: none;
 }
 
+.timeRound-Container {
+    display: none;
+}
+
 @keyframes blinkBackgroundColor {
 
     0%,
     100% {
-        background-color: green;
+        background-color: red;
     }
 
     50% {
@@ -70,7 +74,7 @@ h1 {
     }
 }
 
-#loss-text {
+#loss-text > span{
     padding: 0.6rem 1.5rem;
     border-radius: 0.5rem;
     background-color: red;
