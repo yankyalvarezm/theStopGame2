@@ -545,7 +545,7 @@ function countdown() {
         // * Profession Validation
 
         let professionScore = 0;
-        
+
         Array.from(inputProfessionSelector).forEach(input => {
             let debounceTimeout = null;
 
@@ -678,7 +678,7 @@ function countdown() {
 
 
 
-        
+
 
         console.log('total score:', totalScore);
         console.log('game score:', gameScore);
@@ -771,53 +771,52 @@ function countdown() {
         // hideElements()
     }
 
-        if (timeLeft === 0 && loop === 3) {
+    if (timeLeft === 0 && loop === 3) {
 
-            hasAddedCountryScore = false;
-            hasDeletedCountryScore = false;
+        hasAddedCountryScore = false;
+        hasDeletedCountryScore = false;
 
-            hasAddedSportScore = false;
-            hasDeletedSportScore = false;
+        hasAddedSportScore = false;
+        hasDeletedSportScore = false;
 
+        hasAddedProfessionScore = false;
+        hasDeletedProfessionScore = false;
 
-            hasAddedProfessionScore = false;
-            hasDeletedProfessionScore = false;
+        gameScore = 0;
 
-            gameScore = 0;
+        const country = document.getElementById('input-country');
+        country.value = '';
 
-            const country = document.getElementById('input-country');
-            country.value = '';
-
-            country.style.border = '2px solid grey';
-            country.style.backgroundColor = 'white';
-
-
-            const sport = document.getElementById('input-sport');
-            sport.value = '';
-
-            sport.style.border = '2px solid grey';
-            sport.style.backgroundColor = 'white';
+        country.style.border = '2px solid grey';
+        country.style.backgroundColor = 'white';
 
 
-            const profession = document.getElementById('input-profession');
-            profession.value = '';
+        const sport = document.getElementById('input-sport');
+        sport.value = '';
 
-            profession.style.border = '2px solid grey';
-            profession.style.backgroundColor = 'white';
+        sport.style.border = '2px solid grey';
+        sport.style.backgroundColor = 'white';
 
-            let intervalId = setInterval(() => {
-                clearInterval(intervalId)
-                const lettersArray = 'ABCDEFGHIJKLMNOPQRSTUVYZ'.split('');
 
-                const randomIndex = Math.floor(Math.random() * lettersArray.length);
+        const profession = document.getElementById('input-profession');
+        profession.value = '';
 
-                randomLetter = lettersArray[randomIndex];
-                document.querySelector('.letter-holder').innerText = lettersArray[randomIndex];
-            }, 50);
+        profession.style.border = '2px solid grey';
+        profession.style.backgroundColor = 'white';
 
-            console.log('total score:', totalScore);
-            console.log('game score:', gameScore);
-        }
+        let intervalId = setInterval(() => {
+            clearInterval(intervalId)
+            const lettersArray = 'ABCDEFGHIJKLMNOPQRSTUVYZ'.split('');
+
+            const randomIndex = Math.floor(Math.random() * lettersArray.length);
+
+            randomLetter = lettersArray[randomIndex];
+            document.querySelector('.letter-holder').innerText = lettersArray[randomIndex];
+        }, 50);
+
+        console.log('total score:', totalScore);
+        console.log('game score:', gameScore);
+    }
 
     if (timeLeft === 1 && loop === 3) {
         const difficulty = localStorage.getItem('difficulty')
@@ -825,7 +824,7 @@ function countdown() {
         if ((difficulty === 'Easy' && totalScore > 50) || (difficulty === 'Medium' && totalScore > 70) || (difficulty === 'Hards' && totalScore >= 90)) {
             window.location.href = "../htmls/winner.html";
             console.log('winners page')
-           
+
         } else {
             window.location.href = "../htmls/looser.html";
             console.log('lossers page')
@@ -852,4 +851,4 @@ const difficulty = localStorage.getItem('difficulty')
 
 document.getElementById('win-text').innerHTML = `Congratulations, you complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
 
-document.getElementById('losser-text').innerHTML = `So close..., almost complete the <span>${localStorage.getItem('difficulty')}</pan>level ! ! !`
+document.getElementById('win-text').innerHTML = `So close..., almost complete the <span>${localStorage.getItem('difficulty')}</span> level ! ! !`
