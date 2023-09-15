@@ -217,11 +217,6 @@ function countdown() {
             const roundtitle = document.querySelector('.round-title');
             const clickme = document.querySelector('.click-me')
 
-            // let currentIndex = 0;
-            // const lettersArray = 'ABCDEFGHIJKLMNOPQRSTUVYZ'.split('');
-            // const randomIndex = Math.floor(Math.random() * lettersArray.length);
-            // currentIndex = (currentIndex + 1) % lettersArray.length;
-
             clickme.classList.toggle('hidden');
             // clickme.setAttribute('disabled')
             console.log('clickme hidden', clickme)
@@ -298,7 +293,7 @@ function countdown() {
 
             console.log('toggle #1')
         }
-        // hideElements()
+        hideElements()
     }
 
     if (timeLeft === 24 && loop === 1) {
@@ -342,13 +337,13 @@ function countdown() {
         const headingsContainer = elClassCont('DIV', 'headings-container', '', gameplayContainer);
 
         const catContainer = elClassCont('DIV', 'cat-container', '', headingsContainer);
-        const countryCat = elClassCont('DIV', 'small-rectangle categories', 'Country', catContainer);
-        const sportCat = elClassCont('DIV', 'small-rectangle categories', 'Sport', catContainer);
-        const professionCat = elClassCont('DIV', 'small-rectangle categories', 'Profession', catContainer);
+        const countryCat = elClassCont('DIV', 'small-rectangle categories cat-country', 'Country', catContainer);
+        const sportCat = elClassCont('DIV', 'small-rectangle categories cat-sport', 'Sport', catContainer);
+        const professionCat = elClassCont('DIV', 'small-rectangle categories cat-profession', 'Profession', catContainer);
 
         const nameScoreContainer = elClassCont('DIV', 'nameScore-container', '', headingsContainer);
-        const playerName = elClassCont('DIV', 'small-rectangle nameScore', 'Player', nameScoreContainer);
-        const score = elClassCont('DIV', 'small-rectangle nameScore', 'Score', nameScoreContainer);
+        const playerName = elClassCont('DIV', 'small-rectangle nameScore namePlayer', 'Player', nameScoreContainer);
+        const score = elClassCont('DIV', 'small-rectangle nameScore scoreScore', 'Score', nameScoreContainer);
 
         // * Inputs, Names & Score
         const inputsContainer = elClassCont('DIV', 'inputs-container', '', body);
@@ -768,7 +763,7 @@ function countdown() {
 
             console.log('toggle #2')
         }
-        // hideElements()
+        hideElements()
     }
 
     if (timeLeft === 0 && loop === 3) {

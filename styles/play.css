@@ -272,3 +272,125 @@ h1 {
 .start-color {
     background-color: white;
 }
+
+@media (max-width: 700px) {
+    .headings-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .cat-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .categories {
+        width: 90%;
+        /* margin-bottom: 8rem; */
+    }
+
+    .cat-country {
+        position: relative;
+        top: 0rem;
+    }
+
+    .cat-sport {
+        position: relative;
+        top: 8rem;
+    }
+
+    .cat-profession {
+        position: relative;
+        top: 16rem;
+    }
+
+    .nameScore-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nameScore {
+        width: 90%;
+        position: relative;
+        /* margin-bottom: 4rem; */
+    }
+
+    .inputs-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .inputCatContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #input-country {
+        width: 90%;
+        position: relative;
+        top: -26rem;
+    }
+
+    #input-sport {
+        width: 90%;
+        position: relative;
+        top: -19rem;
+    }
+
+    #input-profession {
+        width: 90%;
+        position: relative;
+        top: -12rem;
+    }
+
+    .inputNameScore {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .input-name {
+        width: 90%;
+        position: relative;
+        top: -7rem;
+        margin-bottom: 10rem;
+    }
+
+    .input-score {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        position: fixed;
+        top: 73rem;
+        left: 2rem;
+    }
+
+    .namePlayer {
+        position: relative;
+        top: 24rem;
+    }
+
+
+    .scoreScore {
+        position: fixed;
+        top: 65rem;
+        z-index: 1;
+        width: 80%;
+        left: 2rem;
+    }
+
+    /* .title {
+        position: fixed;
+        top: 0rem;
+    }
+
+    #timer {
+        position: fixed;
+        top: 0rem;
+    } */
+
+
+}
