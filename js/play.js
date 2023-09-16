@@ -59,7 +59,7 @@ console.log('time left:', timeLeft);
 
 const body = document.querySelector('body'); /* Contains ALL */
 const title = document.querySelector('h1'); /* (UPPER LEFT - TITLE)the STOP game */
-const timeRound = elClassCont('DIV', 'timeRound-container', '', body) /* Contains Time & Round */
+const timeRound = elClassCont('DIV', 'timeRound-container fixed-element', '', body) /* Contains Time & Round */
 const main = elClass('MAIN', 'container'); /* Contains the Rand Letter, Click me! & Stop btn */
 elClass('hr', 'hr-main'); /* HR located under main container */
 
@@ -72,7 +72,7 @@ elClass('hr', 'hr-main'); /* HR located under main container */
 
 
 const generators = elClassCont('SECTION', 'generators', '', main)
-elClassCont('DIV', 'small-rectangle letter-holder', 'A', generators);
+elClassCont('DIV', 'small-rectangle letter-holder fixed-element', 'A', generators);
 
 const sideContainer = elClassCont('DIV', 'side-container', '', generators)
 elClassCont('DIV', 'small-rectangle click-me', 'Click Me!', sideContainer);
@@ -317,7 +317,7 @@ function countdown() {
     }
 
     if (timeLeft === 22 && loop === 1) {
-        const gameplayDescription = elClass('h3', 'description-gameplay')
+        const gameplayDescription = elClass('h3', 'description-gameplay fixed-element')
         gameplayDescription.id = 'descriptionID';
         gameplayDescription.innerHTML = `Try to fill as much categories as you can, good luck!`;
     }
@@ -328,7 +328,7 @@ function countdown() {
         // ** Gameplay Structure Section
 
         // * No. of Round - HEADING
-        const roundbar = elClassCont('DIV', 'small-rectangle round-title', ``, body);
+        const roundbar = elClassCont('DIV', 'small-rectangle round-title fixed-element', ``, body);
 
         // * Container for all
         const gameplayContainer = elClassCont('DIV', 'gameplay-container', '', body);
@@ -337,30 +337,30 @@ function countdown() {
         const headingsContainer = elClassCont('DIV', 'headings-container', '', gameplayContainer);
 
         const catContainer = elClassCont('DIV', 'cat-container', '', headingsContainer);
-        const countryCat = elClassCont('DIV', 'small-rectangle categories cat-country', 'Country', catContainer);
-        const sportCat = elClassCont('DIV', 'small-rectangle categories cat-sport', 'Sport', catContainer);
-        const professionCat = elClassCont('DIV', 'small-rectangle categories cat-profession', 'Profession', catContainer);
+        const countryCat = elClassCont('DIV', 'small-rectangle categories cat-country invisible ocultar', 'Country', catContainer);
+        const sportCat = elClassCont('DIV', 'small-rectangle categories cat-sport invisible ocultar', 'Sport', catContainer);
+        const professionCat = elClassCont('DIV', 'small-rectangle categories cat-profession invisible ocultar', 'Profession', catContainer);
 
         const nameScoreContainer = elClassCont('DIV', 'nameScore-container', '', headingsContainer);
-        const playerName = elClassCont('DIV', 'small-rectangle nameScore namePlayer', 'Player', nameScoreContainer);
+        const playerName = elClassCont('DIV', 'small-rectangle nameScore namePlayer invisible ocultar', 'Player', nameScoreContainer);
         const score = elClassCont('DIV', 'small-rectangle nameScore scoreScore', 'Score', nameScoreContainer);
 
         // * Inputs, Names & Score
         const inputsContainer = elClassCont('DIV', 'inputs-container', '', body);
 
         const inputsCatContainer = elClassCont('DIV', 'inputCatContainer', '', inputsContainer);
-        const inputCountry = elClassCont('textarea', 'inputsCat input-country', '', inputsCatContainer);
+        const inputCountry = elClassCont('textarea', 'inputsCat input-country invisible ocultar', '', inputsCatContainer);
         inputCountry.id = 'input-country'
 
-        const inputSport = elClassCont('textarea', 'inputsCat input-sport', '', inputsCatContainer);
+        const inputSport = elClassCont('textarea', 'inputsCat input-sport invisible ocultar', '', inputsCatContainer);
         inputSport.id = 'input-sport'
 
-        const inputProfession = elClassCont('textarea', 'inputsCat input-profession', '', inputsCatContainer);
+        const inputProfession = elClassCont('textarea', 'inputsCat input-profession invisible ocultar', '', inputsCatContainer);
         inputProfession.id = 'input-profession'
 
 
         const inputNameScore = elClassCont('DIV', 'inputNameScore', '', inputsContainer);
-        const inputName = elClassCont('DIV', 'small-rectangle input-name', 'Name', inputNameScore);
+        const inputName = elClassCont('DIV', 'small-rectangle input-name invisible ocultar', 'Name', inputNameScore);
         inputName.id = 'inputName';
 
         const scoreName = document.getElementById('inputName');

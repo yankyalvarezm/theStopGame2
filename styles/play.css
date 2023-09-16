@@ -292,17 +292,37 @@ h1 {
 
     .cat-country {
         position: relative;
-        top: 0rem;
+        top: 39rem;
+
     }
 
     .cat-sport {
         position: relative;
-        top: 8rem;
+        top: 48rem;
     }
 
     .cat-profession {
         position: relative;
-        top: 16rem;
+        top: 56rem;
+        /* margin-top: 40rem; */
+    }
+
+    #input-country {
+        width: 90%;
+        position: relative;
+        top: 13rem;
+    }
+
+    #input-sport {
+        width: 90%;
+        position: relative;
+        top: 21rem;
+    }
+
+    #input-profession {
+        width: 90%;
+        position: relative;
+        top: 28rem;
     }
 
     .nameScore-container {
@@ -328,69 +348,95 @@ h1 {
         flex-wrap: wrap;
     }
 
-    #input-country {
-        width: 90%;
-        position: relative;
-        top: -26rem;
-    }
 
-    #input-sport {
-        width: 90%;
-        position: relative;
-        top: -19rem;
-    }
-
-    #input-profession {
-        width: 90%;
-        position: relative;
-        top: -12rem;
-    }
 
     .inputNameScore {
         display: flex;
         flex-direction: column;
         background-color: white;
+        margin-bottom: 45rem;
     }
 
     .input-name {
-        width: 90%;
-        position: relative;
-        top: -7rem;
-        margin-bottom: 10rem;
+        display: none;
     }
 
     .input-score {
-        width: 80%;
-        margin-top: 0;
-        margin-bottom: 2rem;
+        width: 90%;
         position: fixed;
-        top: 73rem;
-        left: 2rem;
+        top: 79rem;
+        left: 0.5rem;
+        /* margin-bottom: 2rem; */
+        /* position: fixed; */
+        /* top: 73rem; */
+        /* left: 2rem; */
+    }
+
+    .scoreScore {
+        position: fixed;
+        top: 72rem;
+        z-index: 2;
+        width: 90%;
+        /* margin-bottom: 30rem; */
+        /* left: 2rem; */
     }
 
     .namePlayer {
         position: relative;
-        top: 24rem;
-    }
-
-
-    .scoreScore {
-        position: fixed;
         top: 65rem;
-        z-index: 1;
-        width: 80%;
-        left: 2rem;
+        visibility: hidden;
     }
 
-    /* .title {
+    .description-gameplay {
+        margin-bottom: 10rem;
         position: fixed;
-        top: 0rem;
+        top: 27rem;
+        z-index: 2;
+        background-color: white;
     }
 
-    #timer {
+    .title {
+        text-align: center;
         position: fixed;
-        top: 0rem;
-    } */
+        left: 6rem;
+    }
 
+    .restart {
+        display: none;
+    }
 
+    .letter-holder {
+        width: 90%;
+        position: fixed;
+        top: 20rem;
+        z-index: 2;
+    }
+
+    .timeRound-container {
+        position: fixed;
+        top: 12rem;
+        gap: 14rem;
+        z-index: 2;
+    }
+
+    .hr-main {
+        position: fixed;
+        width: 90%;
+        top: 24rem;
+        z-index: 2;
+    }
+
+    .round-title {
+        position: fixed;
+        width: 90%;
+        top: 36rem;
+        left: 1.5rem;
+        z-index: 2;
+    }
+
+    .click-me {
+        position: fixed;
+        top: 32rem;
+        left: 9rem;
+    }
 }
