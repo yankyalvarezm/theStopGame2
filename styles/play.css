@@ -354,7 +354,7 @@ h1 {
         display: flex;
         flex-direction: column;
         background-color: white;
-        margin-bottom: 45rem;
+        margin-bottom: 58rem;
     }
 
     .input-name {
@@ -364,8 +364,9 @@ h1 {
     .input-score {
         width: 90%;
         position: fixed;
-        top: 79rem;
+        top: 65rem;
         left: 0.5rem;
+        z-index: 2;
         /* margin-bottom: 2rem; */
         /* position: fixed; */
         /* top: 73rem; */
@@ -374,7 +375,7 @@ h1 {
 
     .scoreScore {
         position: fixed;
-        top: 72rem;
+        top: 59rem;
         z-index: 2;
         width: 90%;
         /* margin-bottom: 30rem; */
@@ -399,6 +400,7 @@ h1 {
         text-align: center;
         position: fixed;
         left: 6rem;
+        z-index: 2;
     }
 
     .restart {
@@ -438,5 +440,33 @@ h1 {
         position: fixed;
         top: 32rem;
         left: 9rem;
+        z-index: 2;
+    }
+
+    .cover-1 {
+        height: 27rem;
+        width: 38rem;
+        background-color: white;
+        position: fixed;
+        top: 0rem;
+        z-index: 1;
+    }
+
+    .cover-2 {
+        height: 12rem;
+        width: 38rem;
+        background-color: white;
+        position: fixed;
+        top: 27.2rem;
+        z-index: 1;
+    }
+
+    .cover-3 {
+        height: 29rem;
+        width: 38rem;
+        background-color: white;
+        position: fixed;
+        top: 64rem;
+        z-index: 1;
     }
 }
