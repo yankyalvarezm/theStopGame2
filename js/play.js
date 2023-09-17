@@ -216,17 +216,13 @@ function countdown() {
             const descriptionID = document.getElementById('descriptionID');
             const roundtitle = document.querySelector('.round-title');
             const clickme = document.querySelector('.click-me')
+            // const inputCountry2 = document.getElementById('.input-country');
+            // const inputSport2 = document.getElementById('.input-sport');
+            // const inputProfession2 = document.getElementById('.input-profession');
 
             clickme.classList.toggle('hidden');
             // clickme.setAttribute('disabled')
             console.log('clickme hidden', clickme)
-
-
-
-            // randomLetter = lettersArray[randomIndex];
-            // document.querySelector('.letter-holder').innerText = lettersArray[randomIndex];
-
-            // console.log('letter:', randomLetter);
 
 
             clearTimeout(timeoutId)
@@ -250,6 +246,9 @@ function countdown() {
                 inputsContainer.classList.toggle('hidden')
                 descriptionID.classList.toggle('hidden');
                 roundtitle.classList.toggle('hidden');
+                // inputCountry2.classList.toggle('hidden');
+                // inputSport2.classList.toggle('hidden');
+                // inputProfession2.classList.toggle('hidden');
             }
 
             resetTimer(25)
@@ -283,6 +282,9 @@ function countdown() {
         const descriptionID = document.getElementById('descriptionID');
         const roundtitle = document.querySelector('.round-title')
         const clickme = document.querySelector('.click-me')
+        // const inputCountry2 = document.getElementById('.input-country');
+        // const inputSport2 = document.getElementById('.input-sport');
+        // const inputProfession2 = document.getElementById('.input-profession');
 
         if (gameplayContainer && inputsContainer && descriptionID && roundTitle) {
             gameplayContainer.classList.toggle('hidden')
@@ -290,10 +292,14 @@ function countdown() {
             descriptionID.classList.toggle('hidden');
             roundtitle.classList.toggle('hidden');
             clickme.classList.toggle('hidden');
+            // inputCountry2.classList.toggle('hidden');
+            // inputSport2.classList.toggle('hidden');
+            // inputProfession2.classList.toggle('hidden');
+
 
             console.log('toggle #1')
         }
-        hideElements()
+        // hideElements()
     }
 
     if (timeLeft === 24 && loop === 1) {
@@ -734,6 +740,9 @@ function countdown() {
         const descriptionID = document.getElementById('descriptionID');
         const roundtitle = document.querySelector('.round-title')
         const clickme = document.querySelector('.click-me')
+        // const inputCountry2 = document.getElementById('.input-country');
+        // const inputSport2 = document.getElementById('.input-sport');
+        // const inputProfession2 = document.getElementById('.input-profession');
 
         if (gameplayContainer && inputsContainer && descriptionID && roundTitle) {
             gameplayContainer.classList.toggle('hidden')
@@ -741,6 +750,9 @@ function countdown() {
             descriptionID.classList.toggle('hidden');
             roundtitle.classList.toggle('hidden');
             clickme.classList.toggle('hidden');
+            // inputCountry2.classList.toggle('hidden');
+            // inputSport2.classList.toggle('hidden');
+            // inputProfession2.classList.toggle('hidden');
 
             console.log('toggle #2')
         }
@@ -753,6 +765,9 @@ function countdown() {
         const descriptionID = document.getElementById('descriptionID');
         const roundtitle = document.querySelector('.round-title')
         const clickme = document.querySelector('.click-me')
+        // const inputCountry2 = document.getElementById('.input-country');
+        // const inputSport2 = document.getElementById('.input-sport');
+        // const inputProfession2 = document.getElementById('.input-profession');
 
         if (gameplayContainer && inputsContainer && descriptionID && roundTitle) {
             gameplayContainer.classList.toggle('hidden')
@@ -760,6 +775,9 @@ function countdown() {
             descriptionID.classList.toggle('hidden');
             roundtitle.classList.toggle('hidden');
             clickme.classList.toggle('hidden');
+            // inputCountry2.classList.toggle('hidden');
+            // inputSport2.classList.toggle('hidden');
+            // inputProfession2.classList.toggle('hidden');
 
             console.log('toggle #2')
         }
